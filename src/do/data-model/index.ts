@@ -11,6 +11,21 @@ export interface Catalog {
 }
 
 export interface UserManagement {
+  librariansByEmail: Record<MemberEmail, Library>;
+  membersByEmail: Record<MemberEmail, Member>;
+}
+
+export type MemberEmail = string;
+
+export interface Member {
+  email: MemberEmail;
+  encryptedPassword: string;
+  isBlocked: boolean;
+}
+
+export interface Librarian {
+  email: MemberEmail;
+  encryptedPassword: string;
 }
 
 export type ISBN = string;

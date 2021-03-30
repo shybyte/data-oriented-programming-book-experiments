@@ -42,7 +42,8 @@ const libraryData: Library = {
     }
   },
   'userManagement': {
-    // omitted for now
+    membersByEmail: {},
+    librariansByEmail: {}
   }
 };
 
