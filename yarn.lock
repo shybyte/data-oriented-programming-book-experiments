@@ -533,6 +533,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/deep-freeze@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@types/deep-freeze/-/deep-freeze-0.1.2.tgz#68e5379291910e82c2f0d1629732163c2aa662cc"
+  integrity sha512-M6x29Vk4681dght4IMnPIcF1SNmeEm0c4uatlTFhp+++H1oDK1THEIzuCC2WeCBVhX+gU0NndsseDS3zaCtlcQ==
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
@@ -1171,6 +1176,11 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
+deep-freeze@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/deep-freeze/-/deep-freeze-0.0.1.tgz#3a0b0005de18672819dfd38cd31f91179c893e84"
+  integrity sha1-OgsABd4YZygZ39OM0x+RF5yJPoQ=
+
 deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
@@ -1481,6 +1491,11 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
+
+fp-ts@^2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.9.5.tgz#6690cd8b76b84214a38fc77cbbbd04a38f86ea90"
+  integrity sha512-MiHrA5teO6t8zKArE3DdMPT/Db6v2GUt5yfWnhBTrrsVfeCJUUnV6sgFvjGNBKDmEMqVwRFkEePL7wPwqrLKKA==
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -2553,6 +2568,11 @@ mkdirp@1.x:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+
+monocle-ts@^2.3.9:
+  version "2.3.9"
+  resolved "https://registry.yarnpkg.com/monocle-ts/-/monocle-ts-2.3.9.tgz#037d8a14f72dfd5ce6928c8730de1f0e504da94d"
+  integrity sha512-X5ppMOPAQV/BeENhPpEI0hJelXMoNVtHlTVk89ugZL7ZvK6JtBDFW/762aq1MOzCCaBAFlxGz1Wmxa0DW7tshQ==
 
 ms@2.0.0:
   version "2.0.0"
