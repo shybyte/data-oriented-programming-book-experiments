@@ -47,7 +47,7 @@ const libraryData: Library = {
 };
 
 describe('search', () => {
-  it('should return', () => {
+  test('searchBooksByTitleJSON should return the correct result', () => {
     const result = searchBooksByTitleJSON(libraryData, 'Watchmen');
     expect(JSON.parse(result)).toEqual([{
       'title': 'Watchmen',

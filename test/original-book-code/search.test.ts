@@ -42,8 +42,12 @@ const libraryData = {
 };
 
 describe('search', () => {
-  it('should return', () => {
+  test('searchBooksByTitleJSON should return the correct result', () => {
     const result = Library.searchBooksByTitleJSON(libraryData, "Watchmen");
-    console.log('result', result);
+    expect(JSON.parse(result)).toEqual([{
+      'title': 'Watchmen',
+      'isbn': '978-1779501127',
+      'authorNames': ['Alan Moore', 'Dave Gibbons']
+    }])
   });
 });
