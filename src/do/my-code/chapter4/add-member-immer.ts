@@ -1,5 +1,5 @@
 import produce from 'immer';
-import {Library, Member} from '../../data-model'
+import {Library, Member} from '../../data-model';
 
 export function addMemberViaImmer(library: Library, member: Member): Library {
   if (library.userManagement.membersByEmail[member.email]) {

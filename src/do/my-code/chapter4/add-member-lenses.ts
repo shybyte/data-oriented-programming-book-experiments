@@ -1,5 +1,5 @@
-import {Lens} from 'monocle-ts'
-import {Library, Member} from '../../data-model'
+import {Lens} from 'monocle-ts';
+import {Library, Member} from '../../data-model';
 
 export function addMemberViaLens(library: Library, member: Member): Library {
   const lens = Lens.fromPath<Library>()(['userManagement', 'membersByEmail', member.email]);

@@ -1,4 +1,4 @@
-import {Member, UserManagement, Library} from '../../data-model'
+import {Member, UserManagement, Library} from '../../data-model';
 
 export const UserManager = {
   addMember(userManagement: UserManagement, member: Member): UserManagement {
