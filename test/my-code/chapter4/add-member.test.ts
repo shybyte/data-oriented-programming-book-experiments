@@ -1,5 +1,6 @@
 import deepFreeze from 'deep-freeze';
 import {Library, Member} from '../../../src/do/data-model';
+import {addMemberViaImmer} from '../../../src/do/my-code/chapter4/add-member-immer';
 import {addMemberViaLens} from '../../../src/do/my-code/chapter4/add-member-lenses';
 import {LibraryManager} from '../../../src/do/my-code/chapter4/add-member-vanilla';
 
@@ -28,5 +29,8 @@ describe('add-member', () => {
 
     const libraryFromLens = addMemberViaLens(libraryData, superman);
     expect(libraryFromLens).toEqual(libraryVanilla);
+
+    const libraryFromImmer = addMemberViaImmer(libraryData, superman);
+    expect(libraryFromImmer).toEqual(libraryVanilla);
   });
 });
