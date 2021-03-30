@@ -1,5 +1,5 @@
 import {Library} from '../../src/do/data-model';
-import {searchBooksByTitleJSON} from '../../src/do/my-code/search';
+import {searchBooksByTitleJSON} from '../../src/do/my-code/chapter3/search';
 
 const libraryData: Library = {
   'name': 'The smallest library on earth',
@@ -47,6 +47,15 @@ const libraryData: Library = {
 };
 
 describe('search', () => {
+  test('searchBooksByTitleJSON should return the correct result', () => {
+    const result = searchBooksByTitleJSON(libraryData, 'Watchmen');
+    expect(JSON.parse(result)).toEqual([{
+      'title': 'Watchmen',
+      'isbn': '978-1779501127',
+      'authorNames': ['Alan Moore', 'Dave Gibbons']
+    }]);
+  });
+
   test('searchBooksByTitleJSON should return the correct result', () => {
     const result = searchBooksByTitleJSON(libraryData, 'Watchmen');
     expect(JSON.parse(result)).toEqual([{

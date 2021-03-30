@@ -1,4 +1,4 @@
-import {Book, Catalog, Library} from '../data-model';
+import {Book, Catalog, Library} from '../../data-model';
 
 function authorNames(catalogData: Catalog, book: Book) {
   return book.authorIds.map(authorId => catalogData.authorsById[authorId].name);

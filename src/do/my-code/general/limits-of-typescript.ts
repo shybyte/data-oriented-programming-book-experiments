@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { Author } from '../data-model';
+import { Author } from '../../data-model';
 
 const author: Author = {
   id: 'author-id',
