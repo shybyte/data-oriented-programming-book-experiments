@@ -12,6 +12,8 @@
 * Compile time error checking works great, but automated refactorings (renaming) and code completion works not perfect. 
 * For functional programmers who want to look smart.
 
+See also [https://github.com/gcanti/monocle-ts](https://github.com/gcanti/monocle-ts).
+
 ## [Immer](./add-member-immer.ts)
 
 * Concise
@@ -19,3 +21,5 @@
 * Automated refactorings (renaming) and code completion works perfect.
 * Looks imperative which looks not smart enough for some people.
 * Uses magic.
+
+See also [https://immerjs.github.io/immer/](https://immerjs.github.io/immer/).
