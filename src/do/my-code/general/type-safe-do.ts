@@ -12,4 +12,5 @@ const partialAuthor = _.pick(author, 'id', 'name');
 const name = partialAuthor.name.toLowerCase();
 
 // Does not compile because TypeScript knows that the pick function has ignored the bookIsbns
-// const bookIsbn = partialAuthor.bookIsbn
+// @ts-expect-error
+const bookIsbn = partialAuthor.bookIsbn

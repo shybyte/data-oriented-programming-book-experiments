@@ -11,7 +11,9 @@ function getPropertyKeyFromEventName<T extends keyof Author>(prop: `${T}Changed`
   return prop.replace('Changed', '') as T;
 }
 
-// const prop = getPropertyKeyFromEventName('unknownChanged'); // Does not compile, because 'unknown' is no property of Author
+// @ts-expect-error
+const propUnknown = getPropertyKeyFromEventName('unknownChanged'); // Does not compile, because 'unknown' is no property of Author
+
 const prop = getPropertyKeyFromEventName('nameChanged'); // returns 'name'
 const partialAuthor = _.pick(author, 'id', prop);
 
@@ -21,6 +23,7 @@ const partialAuthor = _.pick(author, 'id', prop);
 const name = partialAuthor.name.toLowerCase();
 
 // Does not compile because TypeScript knows that the pick function has ignored the bookIsbns
-// const bookIsbn = partialAuthor.bookIsbn
+// @ts-expect-error
+const bookIsbn = partialAuthor.bookIsbn
 
 
