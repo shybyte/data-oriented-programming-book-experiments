@@ -2,7 +2,7 @@
 
 ## [Vanilla TS](./add-member-vanilla.ts)
 
-* Looks a bit like to much boilerplate.
+* Looks a bit like too much boilerplate.
 * Everything else is OK.
 
 ## [Lenses (mono)](./add-member-immer.ts)
