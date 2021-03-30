@@ -1,5 +1,5 @@
 import {Library} from '../../src/do/data-model';
-import {searchBooksByTitleJSON} from '../../src/do/my-code/chapter3/search';
+import {bookInfo, searchBooksByTitleJSON} from '../../src/do/my-code/chapter3/search';
 
 const libraryData: Library = {
   'name': 'The smallest library on earth',
@@ -56,12 +56,25 @@ describe('search', () => {
     }]);
   });
 
-  test('searchBooksByTitleJSON should return the correct result', () => {
-    const result = searchBooksByTitleJSON(libraryData, 'Watchmen');
-    expect(JSON.parse(result)).toEqual([{
-      'title': 'Watchmen',
-      'isbn': '978-1779501127',
-      'authorNames': ['Alan Moore', 'Dave Gibbons']
-    }]);
+  test('bookInfo returns a statically typed result', () => {
+    const bookInfoResult = bookInfo(libraryData.catalog, libraryData.catalog.booksByIsbn['978-1779501127']);
+
+    // TypeScript can infer all attributes and their types.
+    bookInfoResult.title.toLowerCase();
+    bookInfoResult.isbn.toLowerCase();
+    bookInfoResult.authorNames.map(name => name.toLowerCase());
+
+    // TypeScript knows the types and complains if you use them wrongly.
+    // @ts-expect-error
+    const product = bookInfoResult.isbn * 10;
+
+    // TypeScript won't compile if you an attribute that not exist.
+    // @ts-expect-error
+    bookInfoResult.something;
+
+    // publicationYear exist on a book but not in the result of bookInfo.
+    // TypeScript can infer this from the code in bookInfo.
+    // @ts-expect-error
+    bookInfoResult.publicationYear;
   });
 });

@@ -4,7 +4,7 @@ function authorNames(catalogData: Catalog, book: Book) {
   return book.authorIds.map(authorId => catalogData.authorsById[authorId].name);
 }
 
-function bookInfo(catalogData: Catalog, book: Book) {
+export function bookInfo(catalogData: Catalog, book: Book) {
   return {
     title: book.title,
     isbn: book.isbn,
