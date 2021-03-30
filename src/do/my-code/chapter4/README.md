@@ -5,7 +5,7 @@
 * Looks a bit like too much boilerplate.
 * Everything else is OK.
 
-## [Lenses (mono)](./add-member-lenses.ts)
+## [Lenses (monocle-ts)](./add-member-lenses.ts)
 
 * Concise
 * The path to the member is defined only once (minimal duplication) which is pretty cool.
