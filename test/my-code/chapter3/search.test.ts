@@ -1,5 +1,5 @@
-import {Library} from '../../src/do/data-model';
-import {bookInfo, searchBooksByTitleJSON} from '../../src/do/my-code/chapter3/search';
+import {Library} from '../../../src/do/data-model';
+import {bookInfo, searchBooksByTitleJSON} from '../../../src/do/my-code/chapter3/search';
 
 const libraryData: Library = {
   'name': 'The smallest library on earth',

@@ -1,4 +1,4 @@
-import {Library} from '../../src/do/original-book-code/chapter3/search';
+import {Library} from '../../../src/do/original-book-code/chapter3/search';
 
 const libraryData = {
   "name": "The smallest library on earth",
