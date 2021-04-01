@@ -1,6 +1,6 @@
 import {getKeys, isObject} from '../utils';
 
-type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> };
+export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> };
 
 export const DataDiff = {
   diff<T>(data1: T, data2: T): DeepPartial<T> | undefined {
