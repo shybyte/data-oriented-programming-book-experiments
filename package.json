@@ -5,7 +5,8 @@
   "author": "shybyte@users.noreply.github.com",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "tsc:watch": "tsc --watch"
   },
   "devDependencies": {
     "@types/jest": "^26.0.21",

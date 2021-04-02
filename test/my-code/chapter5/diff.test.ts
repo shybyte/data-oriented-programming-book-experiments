@@ -1,4 +1,4 @@
-import {DataDiff} from '../../../src/do/my-code/chapter5/diff';
+import {DataDiff, DeepPartial} from '../../../src/do/my-code/chapter5/diff';
 
 describe('diff', () => {
   test('no difference', () => {
@@ -31,7 +31,7 @@ describe('diff', () => {
       {}
     );
     expect(diff).toEqual({a: undefined});
-    expect('a' in diff!).toEqual(true);
+    expect('a' in (diff as any)).toEqual(true);
   });
 
   test('remove nested attribute', () => {
@@ -40,7 +40,7 @@ describe('diff', () => {
       {a: {a1: 0}},
     );
     expect(diff).toEqual({a: {a2: undefined}});
-    expect('a2' in (diff!.a!)).toEqual(true);
+    expect('a2' in (diff as any).a).toEqual(true);
   });
 
   test('add array element', () => {

@@ -1,10 +1,10 @@
 import {getKeys, isObject} from '../utils';
 
 export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> };
-export const NO_CHANGE = Symbol("NO_CHANGE");
+export const NO_CHANGE = Symbol('NO_CHANGE');
 
 export const DataDiff = {
-  diff<T>(data1: T, data2: T): DeepPartial<T> | typeof NO_CHANGE{
+  diff<T>(data1: T, data2: T): DeepPartial<T> | typeof NO_CHANGE {
     if (isObject(data1) && isObject(data2)) {
       return DataDiff.diffObject(data1, data2);
     } else if (data1 !== data2) {

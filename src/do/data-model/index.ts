@@ -11,7 +11,7 @@ export interface Catalog {
 }
 
 export interface UserManagement {
-  librariansByEmail: Record<MemberEmail, Library>;
+  librariansByEmail: Record<MemberEmail, Librarian>;
   membersByEmail: Record<MemberEmail, Member>;
 }
 
