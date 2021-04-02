@@ -9,7 +9,7 @@ function blockMember(library: Library, email: string) {
 }
 
 describe('Challenge 3 - Add a piece of information', () => {
-  test('searchBooksByTitleJSON should return the correct result', () => {
+  test('blockMember should not modify the original library', () => {
     const updatedLibraryData = blockMember(libraryData, 'samantha@gmail.com');
 
     expect(updatedLibraryData.userManagement.membersByEmail['samantha@gmail.com'].isBlocked).toEqual(true);
