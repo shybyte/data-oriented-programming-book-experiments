@@ -1,15 +1,16 @@
 import {getKeys, isObject} from '../utils';
 
 export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> };
+export const NO_CHANGE = Symbol("NO_CHANGE");
 
 export const DataDiff = {
-  diff<T>(data1: T, data2: T): DeepPartial<T> | undefined {
+  diff<T>(data1: T, data2: T): DeepPartial<T> | typeof NO_CHANGE{
     if (isObject(data1) && isObject(data2)) {
       return DataDiff.diffObject(data1, data2);
     } else if (data1 !== data2) {
       return data2;
     } else {
-      return undefined;
+      return NO_CHANGE;
     }
   },
 
@@ -25,7 +26,7 @@ export const DataDiff = {
     const keys = new Set([...getKeys(data1), ...getKeys(data2)]);
     for (const key of keys) {
       const childResult = DataDiff.diff(data1[key], data2[key]);
-      if (childResult !== undefined && !isEmptyObject(childResult)) {
+      if (childResult !== NO_CHANGE && !isEmptyObject(childResult)) {
         diff[key] = childResult;
       }
     }

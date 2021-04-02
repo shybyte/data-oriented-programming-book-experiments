@@ -26,10 +26,21 @@ describe('diff', () => {
   });
 
   test('remove attribute', () => {
-    expect(DataDiff.diff(
+    const diff = DataDiff.diff(
       {a: 1},
       {}
-    )).toEqual({a: undefined});
+    );
+    expect(diff).toEqual({a: undefined});
+    expect('a' in diff!).toEqual(true);
+  });
+
+  test('remove nested attribute', () => {
+    const diff = DataDiff.diff(
+      {a: {a1: 0, a2: 0}},
+      {a: {a1: 0}},
+    );
+    expect(diff).toEqual({a: {a2: undefined}});
+    expect('a2' in (diff!.a!)).toEqual(true);
   });
 
   test('add array element', () => {
