@@ -1,9 +1,9 @@
 import _ from 'lodash';
 
 export function joinArrays<A, B>(a: A[], b: B[], keyA: keyof A, keyB: keyof B) {
-  var mapA = _.keyBy(a, keyA);
-  var mapB = _.keyBy(b, keyB);
-  var mapsMerged = _.merge(mapA, mapB);
+  const mapA = _.keyBy(a, keyA);
+  const mapB = _.keyBy(b, keyB);
+  const mapsMerged = _.merge(mapA, mapB);
   return _.values(mapsMerged);
 }
 
