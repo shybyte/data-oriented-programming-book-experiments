@@ -12,7 +12,7 @@ describe('join-arrays', () => {
     const isbn: string | undefined = arrayEl.isbn;
     const isbn_13: string | undefined = arrayEl.isbn_13;
 
-    // TypeScript knows e.g. that number_of_pages can't be a string
+    // TypeScript knows e.g. that number_of_pages can't be a string.
     // @ts-expect-error
     const numberOfPagesString: string | undefined = arrayEl.number_of_pages;
 
