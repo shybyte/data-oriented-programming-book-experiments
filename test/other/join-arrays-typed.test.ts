@@ -2,6 +2,11 @@ import {dbBookInfos, joinArrays, openLibBookInfos} from './join-arrays-typed';
 
 describe('join-arrays', () => {
   it('should join', () => {
+
+    // TypeScript knows that isbn2 does not exist in the first array.
+    // @ts-expect-error
+    const joinedArraysInvalidKey = joinArrays(dbBookInfos, openLibBookInfos, 'isbn2', 'isbn_13');
+
     const joinedArrays = joinArrays(dbBookInfos, openLibBookInfos, 'isbn', 'isbn_13');
 
     const arrayEl = joinedArrays[0];
