@@ -7,7 +7,7 @@ describe('join-arrays', () => {
     const arrayEl = joinedArrays[0];
 
     // TypeScript infers the correct type and
-    // infers also that an attribute might get undefined if the join fails to join
+    // infers also that an attribute might get undefined if the join fails to join.
     const numberOfPages: number | undefined = arrayEl.number_of_pages;
     const isbn: string | undefined = arrayEl.isbn;
     const isbn_13: string | undefined = arrayEl.isbn_13;
